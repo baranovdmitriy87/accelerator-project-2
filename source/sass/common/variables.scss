@@ -1,0 +1,31 @@
+//  Fonts
+$montserrat: "Montserrat", "Arial", sans-serif;
+
+// Base colors
+$base-primery: #2D383F;
+$base-additional: #0266C1;
+$base-white: #ffffff;
+
+// overlay colors
+
+$color-overlay-slide-grad-33: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 14%, rgba(15, 20, 41, 0) 98%);
+$color-overlay-card-grad: linear-gradient(0.00deg, rgba(0, 0, 0, 0.6) 22%, rgba(0, 0, 0, 0) 60%);
+
+// Animation
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+$border-width: 2px solid;
+
+// Width-Viewports
+
+$mobile-width: 320px;
+$mobile-width-only: 767px;
+$tablet-width-only: 1439px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// $vp-320: 320px;
+// $vp-767: 767px;
+// $vp-768: 768px;
+// // $vp-1439: 1439px;
+// $vp-1440: 1440px;

@@ -1,0 +1,45 @@
+//  reset default styles (ul)
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+}
+
+
+@mixin burger-contents {
+  position: relative;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: $base-white;
+  cursor: pointer;
+}
+
+
+// breakpoints
+
+// @mixin vp-1440 {
+//   @media (min-width: ($vp-1440)) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-768 {
+//   @media (min-width: ($vp-768)) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-767 {
+//   @media (max-width: ($vp-767)) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-374 {
+//   @media (min-width: ($vp-375)) {
+//     @content;
+//   }
+// }
