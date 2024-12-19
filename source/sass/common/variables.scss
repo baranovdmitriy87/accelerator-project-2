@@ -13,9 +13,11 @@ $number-hover-blue: rgba(255, 255, 255, 0.50);;
 
 
 // overlay colors
-
-$color-overlay-slide-grad-33: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 14%, rgba(15, 20, 41, 0) 98%);
-$color-overlay-card-grad: linear-gradient(0.00deg, rgba(0, 0, 0, 0.6) 22%, rgba(0, 0, 0, 0) 60%);
+$color-overlay-slider-hero: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 13%, rgba(15, 20, 41, 0) 96%);
+// background: linear-gradient(142.94deg, rgba(15, 20, 41, 0.33) 11.202%,rgba(15, 20, 41, 0) 100.522%),url(image);
+// background: linear-gradient(142.94deg, rgba(15, 20, 41, 0.33) 12.38%,rgba(15, 20, 41, 0) 99.428%),url(image);
+// background: linear-gradient(142.94deg, rgba(15, 20, 41, 0.33) 17.225%,rgba(15, 20, 41, 0) 94.93%),url(image);
+$color-overlay-slider-card: linear-gradient(0.00deg, rgba(0, 0, 0, 0.6) 22%, rgba(0, 0, 0, 0) 60%);
 
 // Animation
 $tf-default: ease;
