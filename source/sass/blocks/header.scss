@@ -111,14 +111,12 @@
   line-height: 14px;
   margin-top: 12px;
   color: $base-white;
-  // letter-spacing: 0.1px;
 
   @media (min-width: $tablet-width) {
     display: block;
     margin: 0;
     font-size: 16px;
     line-height: 16px;
-    // letter-spacing: 0.1px;
   }
 
   @media (min-width: $desktop-width) {
@@ -224,3 +222,4 @@
     column-gap: 22px;
   }
 }
+
