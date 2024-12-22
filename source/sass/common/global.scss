@@ -41,6 +41,14 @@ a {
   text-decoration: none;
 }
 
+/* Does disabled for links  */
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  // color: $link-disabled-blue;
+  opacity: 0.3;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

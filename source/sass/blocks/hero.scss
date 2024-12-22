@@ -1,5 +1,14 @@
 .hero {
-  background-color: linear-gradient(143deg, rgb(151, 182, 226, 0.33) 30%, rgb(90, 87, 82)50%);
+  height: 568px;
+  background: $bg-color-hero;
+
+  @media (min-width: $tablet-width) {
+    height: 935px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 800px;
+  }
 }
 
 .hero__list-swiper {
@@ -27,6 +36,10 @@
     width: 768px;
     padding: 150px 45px 90px 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 200px 0px 80px 0px;
+  }
 }
 
 .hero__content {
@@ -43,7 +56,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    // background-color: $text-color;
+    width: 1200px;
+    margin: 0;
+    align-items: flex-start;
   }
 }
 
@@ -51,6 +66,34 @@
   @media (max-width: $tablet-width-only) {
     display: none;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 136px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.hero__details span {
+  width: 155px;
+  height: 44px;
+  border: 1px solid $number-hover-blue;
+  color: $base-white;
+  font-family: $montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+}
+
+.hero__details .hero__details-level {
+  width: 184px;
 }
 
 .hero__content h2 {
@@ -67,6 +110,15 @@
     line-height: 56px;
     margin-bottom: 13px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 780px;
+    font-size: 77px;
+    line-height: 77px;
+    margin-bottom: 25px;
+    text-align: left;
+    margin: 0 0 22px;
+  }
 }
 
 .hero__content p {
@@ -76,12 +128,19 @@
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     width: 474px;
     font-size: 17px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 472px;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: left;
   }
 }
 
@@ -100,6 +159,25 @@
   @media (min-width: $tablet-width) {
     margin-top: 37px;
   }
+
+  &:hover {
+    color: $btn-links-conditions;
+    border: 1px solid $link-active-blue;
+    background: transparent;
+  }
+
+  &:focus-visible {
+    color: $btn-links-conditions;
+    border: none;
+    outline: unset;
+    background: transparent;
+  }
+
+  &:active {
+    background-color: $btn-links-conditions;
+    color: $base-white;
+    border: none;
+  }
 }
 
 .hero__image {
@@ -108,5 +186,9 @@
 
   @media (min-width: $tablet-width) {
     top: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 126px;
   }
 }

@@ -4,8 +4,8 @@
 // // import 'swiper/css';
 
 import { initBurgerMenu } from './modules/burger-menu';
-// // // import { sliderThumbs, sliderImages } from './modules/swiper-slider';
-// // // import { getSlider } from './modules/swiper-slider';
+// // // // import { sliderThumbs, sliderImages } from './modules/swiper-slider';
+// // // // import { getSlider } from './modules/swiper-slider';
 
 
 
@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
 //   header.classList.toggle('header--opened', !isClosed);
 //   overlay.classList.toggle('is-active', !isClosed);
 //   document.body.style.overflow = isClosed ? 'auto' : 'hidden';
+//   onDocumentKeyDown();
 // };
 
 // const closeburgerToggle = () => {
@@ -36,11 +37,13 @@ window.addEventListener('DOMContentLoaded', () => {
 //   overlay.classList.remove('is-active');
 // };
 
-// document.addEventListener('keydown', function (evt) {
-//   if (evt.key === 'Escape') {
-//     closeburgerToggle();
-//   }
-// });
+// const onDocumentKeyDown = () => {
+//   document.addEventListener('keydown', function (evt) {
+//     if (evt.key === 'Escape') {
+//       closeburgerToggle();
+//     }
+//   });
+// };
 
 // menuLinks.forEach((link) => {
 //   link.addEventListener('click', event => {
@@ -49,12 +52,16 @@ window.addEventListener('DOMContentLoaded', () => {
 //     const targetElement = document.querySelector(targetId);
 
 //     if (targetElement) {
+//       // burgerToggle();
+//       overlay.classList.toggle('is-active');
+//       header.classList.remove('header--opened');
+//       header.classList.add('header--closed');
+//       document.body.style.overflow = 'auto';
 //       targetElement.scrollIntoView({
 //         behavior: 'smooth',
 //         block: 'start'
 //       });
 //     }
-//     burgerToggle();
 //   });
 // });
 
