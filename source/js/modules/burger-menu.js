@@ -36,7 +36,6 @@ const initBurgerMenu = () => {
       const targetElement = document.querySelector(targetId);
 
       if (targetElement) {
-        // burgerToggle();
         overlay.classList.toggle('is-active');
         header.classList.remove('header--opened');
         header.classList.add('header--closed');
@@ -51,6 +50,7 @@ const initBurgerMenu = () => {
 
   headerToggle.addEventListener('click', burgerToggle);
 };
+
 scrollUpload();
 
 export { initBurgerMenu };

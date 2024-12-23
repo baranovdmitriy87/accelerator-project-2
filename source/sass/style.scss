@@ -1,6 +1,8 @@
 // Vendor
 @import "vendor/normalize";
-// @import "vendor/swiper";
+@import "vendor/swiper";
+// @import "../../node_modules/swiper/swiper-bundle";
+// @import "../../node_modules/swiper/swiper-vars";
 
 //  GLOBAL
 @import "./common/variables";
@@ -11,15 +13,11 @@
 //  BLOCKS
 @import "./blocks/container";
 @import "./blocks/header";
-@import "./blocks/button.scss";
+@import "./blocks/button";
 @import "./blocks/hero";
-// @import "./blocks/main-nav.scss";
-@import "./blocks/site-list.scss";
-@import "./blocks/overlay.scss";
-
-// @import "./blocks/hero";
-// @import "./blocks/button";
-// @import "./blocks/footer";
+@import "./blocks/site-list";
+@import "./blocks/overlay";
+// // @import "./blocks/footer";
 // @import "./blocks/about";
 // @import "./blocks/price";
 // @import "./blocks/juri";
