@@ -36,17 +36,17 @@ var Swiper = (function () {
       src = {};
     }
     Object.keys(src).forEach(key => {
-      if (typeof target[key] === 'undefined') target[key] = src[key]; else if (isObject$1(src[key]) && isObject$1(target[key]) && Object.keys(src[key]).length > 0) {
+      if (typeof target[key] === 'undefined') target[key] = src[key];else if (isObject$1(src[key]) && isObject$1(target[key]) && Object.keys(src[key]).length > 0) {
         extend$1(target[key], src[key]);
       }
     });
   }
   const ssrDocument = {
     body: {},
-    addEventListener() { },
-    removeEventListener() { },
+    addEventListener() {},
+    removeEventListener() {},
     activeElement: {
-      blur() { },
+      blur() {},
       nodeName: ''
     },
     querySelector() {
@@ -60,7 +60,7 @@ var Swiper = (function () {
     },
     createEvent() {
       return {
-        initEvent() { }
+        initEvent() {}
       };
     },
     createElement() {
@@ -68,7 +68,7 @@ var Swiper = (function () {
         children: [],
         childNodes: [],
         style: {},
-        setAttribute() { },
+        setAttribute() {},
         getElementsByTagName() {
           return [];
         }
@@ -112,16 +112,16 @@ var Swiper = (function () {
       search: ''
     },
     history: {
-      replaceState() { },
-      pushState() { },
-      go() { },
-      back() { }
+      replaceState() {},
+      pushState() {},
+      go() {},
+      back() {}
     },
     CustomEvent: function CustomEvent() {
       return this;
     },
-    addEventListener() { },
-    removeEventListener() { },
+    addEventListener() {},
+    removeEventListener() {},
     getComputedStyle() {
       return {
         getPropertyValue() {
@@ -129,11 +129,11 @@ var Swiper = (function () {
         }
       };
     },
-    Image() { },
-    Date() { },
+    Image() {},
+    Date() {},
     screen: {},
-    setTimeout() { },
-    clearTimeout() { },
+    setTimeout() {},
+    clearTimeout() {},
     matchMedia() {
       return {};
     },
@@ -1632,7 +1632,7 @@ var Swiper = (function () {
     const minTranslate = swiper.minTranslate();
     const maxTranslate = swiper.maxTranslate();
     let newTranslate;
-    if (translateBounds && translate > minTranslate) newTranslate = minTranslate; else if (translateBounds && translate < maxTranslate) newTranslate = maxTranslate; else newTranslate = translate;
+    if (translateBounds && translate > minTranslate) newTranslate = minTranslate;else if (translateBounds && translate < maxTranslate) newTranslate = maxTranslate;else newTranslate = translate;
 
     // Update progress
     swiper.updateProgress(newTranslate);
@@ -1721,7 +1721,7 @@ var Swiper = (function () {
     } = swiper;
     let dir = direction;
     if (!dir) {
-      if (activeIndex > previousIndex) dir = 'next'; else if (activeIndex < previousIndex) dir = 'prev'; else dir = 'reset';
+      if (activeIndex > previousIndex) dir = 'next';else if (activeIndex < previousIndex) dir = 'prev';else dir = 'reset';
     }
     swiper.emit(`transition${step}`);
     if (runCallbacks && activeIndex !== previousIndex) {
@@ -1851,7 +1851,7 @@ var Swiper = (function () {
     // Update progress
     swiper.updateProgress(translate);
     let direction;
-    if (slideIndex > activeIndex) direction = 'next'; else if (slideIndex < activeIndex) direction = 'prev'; else direction = 'reset';
+    if (slideIndex > activeIndex) direction = 'next';else if (slideIndex < activeIndex) direction = 'prev';else direction = 'reset';
 
     // Update Index
     if (rtl && -translate === swiper.translate || !rtl && translate === swiper.translate) {
@@ -3054,7 +3054,7 @@ var Swiper = (function () {
         return;
       }
       if (swiper.swipeDirection === 'next') {
-        if (ratio >= params.longSwipesRatio) swiper.slideTo(params.rewind && swiper.isEnd ? rewindFirstIndex : stopIndex + increment); else swiper.slideTo(stopIndex);
+        if (ratio >= params.longSwipesRatio) swiper.slideTo(params.rewind && swiper.isEnd ? rewindFirstIndex : stopIndex + increment);else swiper.slideTo(stopIndex);
       }
       if (swiper.swipeDirection === 'prev') {
         if (ratio > 1 - params.longSwipesRatio) {
@@ -3459,24 +3459,24 @@ var Swiper = (function () {
     const suffixes = prepareClasses(['initialized', params.direction, {
       'free-mode': swiper.params.freeMode && params.freeMode.enabled
     }, {
-        'autoheight': params.autoHeight
-      }, {
-        'rtl': rtl
-      }, {
-        'grid': params.grid && params.grid.rows > 1
-      }, {
-        'grid-column': params.grid && params.grid.rows > 1 && params.grid.fill === 'column'
-      }, {
-        'android': device.android
-      }, {
-        'ios': device.ios
-      }, {
-        'css-mode': params.cssMode
-      }, {
-        'centered': params.cssMode && params.centeredSlides
-      }, {
-        'watch-progress': params.watchSlidesProgress
-      }], params.containerModifierClass);
+      'autoheight': params.autoHeight
+    }, {
+      'rtl': rtl
+    }, {
+      'grid': params.grid && params.grid.rows > 1
+    }, {
+      'grid-column': params.grid && params.grid.rows > 1 && params.grid.fill === 'column'
+    }, {
+      'android': device.android
+    }, {
+      'ios': device.ios
+    }, {
+      'css-mode': params.cssMode
+    }, {
+      'centered': params.cssMode && params.centeredSlides
+    }, {
+      'watch-progress': params.watchSlidesProgress
+    }], params.containerModifierClass);
     classNames.push(...suffixes);
     el.classList.add(...classNames);
     swiper.emitContainerClasses();

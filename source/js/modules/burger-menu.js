@@ -12,21 +12,12 @@ const initBurgerMenu = () => {
     header.classList.toggle('header--opened', !isClosed);
     overlay.classList.toggle('is-active', !isClosed);
     document.body.style.overflow = isClosed ? 'auto' : 'hidden';
-    onDocumentKeyDown();
   };
 
   const closeburgerToggle = () => {
     header.classList.remove('header--opened');
     header.classList.add('header--closed');
     overlay.classList.remove('is-active');
-  };
-
-  const onDocumentKeyDown = () => {
-    document.addEventListener('keydown', function (evt) {
-      if (evt.key === 'Escape') {
-        closeburgerToggle();
-      }
-    });
   };
 
   menuLinks.forEach((link) => {
