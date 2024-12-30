@@ -50,7 +50,7 @@ const initSliderHero = () => {
     //   },
     // },
     pagination: {
-      el: '.hero__swiper-pagination',
+      el: '.swiper-pagination',
       clickable: true,
     },
   });
