@@ -17,6 +17,14 @@
   cursor: pointer;
 }
 
+@mixin disabled {
+
+  &:disabled,
+  &.is-disabled {
+    @content;
+  }
+}
+
 
 // breakpoints
 

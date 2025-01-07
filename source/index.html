@@ -211,12 +211,43 @@
           </li>
         </ul>
         <div class="hero__swiper-pagination swiper-pagination">
-          <!-- <div class="hero__swiper-pagination-bullet-active swiper-pagination-bullet-active"></div>
-          <div class="hero__swiper-pagination-bullet swiper-pagination-bullet"></div>
-          <div class="hero__swiper-pagination-bullet swiper-pagination-bullet"></div> -->
         </div>
       </div>
 
+    </section>
+
+    <section class="feedback" id="feedback" data-test="form">
+      <div class="feedback__container container">
+        <h2>Остались вопросы?</h2>
+        <p>Заполните форму и наш оператор <br> свяжется <br> с вами для консультации.</p>
+        <div class="feedback__form-container" data-form-validate="data-form-validate" data-callback="base">
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post"
+            data-form-feedback="data-form-feedback">
+            <div class="feedback__form-input feedback__form-input--phone" data-validate-type="phone" data-required="data-required">
+              <label aria-label="Введите ваш номер телефона.">
+                <input type="tel" name="phone" placeholder="Телефон" autocomplete="off" required>
+              </label>
+            </div>
+            <div class="feedback__form-input feedback__form-input--email" data-validate-type="email" data-required="data-required">
+              <label aria-label="Введите вашу электронную почту.">
+                <input type="email" name="email" placeholder="Email" autocomplete="off" required>
+              </label>
+            </div>
+            <button class="feedback__form-button button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+
+      <picture>
+        <source type="image/webp" media="(min-width: 1440px)"
+          srcset="./img/feedback/feedback-form-desktop.webp, ./img/feedback/feedback-form-desktop@2x.webp 2x"
+          width="1440" height="800">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="./img/feedback/feedback-form-tablet.webp, ./img/feedback/feedback-form-tablet@2x.webp 2x" width="768"
+          height="422">
+        <img class="feedback-form__picture" src="./img/feedback/feedback-form-mobile.jpg" alt="Хвойный лес в облаках"
+          width="320" height="568" srcset="./img/feedback/feedback-form-mobile@2x.jpg 2x" loading="lazy">
+      </picture>
     </section>
 
   </main>
@@ -226,7 +257,6 @@
   <div id="reviews" data-test="reviews" style="height: 100vh;">reviews</div>
   <div id="adv" data-test="adv">adv</div>
   <div id="gallery" data-test="gallery">gallery</div>
-  <div id="form" data-test="form">form</div>
   <div id="footer" data-test="footer">footer</div> -->
   <script type="module" src="js/main.js"></script>
 </body>

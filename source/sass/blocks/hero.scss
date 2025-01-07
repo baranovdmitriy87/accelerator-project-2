@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   // min-width: 0;
   overflow: hidden;
 }
@@ -122,10 +123,6 @@
   height: auto;
 }
 
-.hero__swiper-wrapper {}
-
-.hero__swiper-slider {}
-
 .hero__list {
   @include list-reset;
   margin: 0;
@@ -242,7 +239,8 @@
     line-height: 77px;
     margin-bottom: 25px;
     text-align: left;
-    margin: 0 0 22px;
+    margin: 0 0 23px;
+    letter-spacing: -0.06px;
   }
 }
 
@@ -252,7 +250,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 136px;
+    margin-top: 133px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -261,7 +259,7 @@
 }
 
 .hero__details span {
-  width: 155px;
+  width: 156px;
   height: 44px;
   border: 1px solid $number-hover-blue;
   color: $base-white;
@@ -281,38 +279,12 @@
 }
 
 .hero__button {
-  width: 180px;
-  height: 56px;
-  background-color: $base-additional;
-  color: $base-white;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
-  text-align: center;
-  text-transform: unset;
+  width: 182px;
   margin-top: 60px;
+  min-height: 56px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 37px;
-  }
-
-  &:hover {
-    color: $btn-links-conditions;
-    border: 1px solid $link-active-blue;
-    background: transparent;
-  }
-
-  &:focus-visible {
-    color: $btn-links-conditions;
-    border: none;
-    outline: unset;
-    background: transparent;
-  }
-
-  &:active {
-    background-color: $btn-links-conditions;
-    color: $base-white;
-    border: none;
+    margin-top: 38px;
   }
 }
 
