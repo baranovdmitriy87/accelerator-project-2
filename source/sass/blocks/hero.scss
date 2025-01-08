@@ -9,12 +9,24 @@
   background: $bg-color-hero;
 
   @media (min-width: $tablet-width) {
-    height: 935px;
+    height: 1036px;
   }
 
   @media (min-width: $desktop-width) {
     height: 800px;
   }
+}
+
+.hero__picture {
+  @media (min-width: $tablet-width) {
+    min-height: 1037px;
+    object-fit: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    all: unset;
+  }
+
 }
 
 // slider
@@ -140,7 +152,6 @@
   padding: 40px 15px 40px 15px;
 
   @media (min-width: $tablet-width) {
-    // width: 768px;
     padding: 150px 45px 90px 45px;
   }
 
@@ -162,7 +173,6 @@
 }
 
 .hero__content {
-  // width: 320px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -171,11 +181,11 @@
 
   @media (min-width: $tablet-width) {
     width: 678px;
-    margin-top: 192px;
+    margin-top: 194px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1203px;
+    width: 1202px;
     margin: 0;
     align-items: flex-start;
   }
@@ -200,6 +210,8 @@
     width: 474px;
     font-size: 17px;
     line-height: 24px;
+    margin-left: 1px;
+    // letter-spacing: -0.03px;
   }
 
   @media (min-width: $desktop-width) {
@@ -230,7 +242,10 @@
   @media (min-width: $tablet-width) {
     font-size: 56px;
     line-height: 56px;
-    margin-bottom: 13px;
+    margin: 0 0 13px 1px;
+    // margin-bottom: 13px;
+    // letter-spacing: -0.15px;
+
   }
 
   @media (min-width: $desktop-width) {
@@ -239,8 +254,8 @@
     line-height: 77px;
     margin-bottom: 25px;
     text-align: left;
-    margin: 0 0 23px;
-    letter-spacing: -0.06px;
+    margin: 0 1px 23px;
+    letter-spacing: -0.2px;
   }
 }
 
@@ -254,12 +269,12 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 9px;
   }
 }
 
 .hero__details span {
-  width: 156px;
+  width: 157px;
   height: 44px;
   border: 1px solid $number-hover-blue;
   color: $base-white;
@@ -281,10 +296,10 @@
 .hero__button {
   width: 182px;
   margin-top: 60px;
-  min-height: 56px;
+  min-height: 57px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 38px;
+    margin-top: 37px;
   }
 }
 
