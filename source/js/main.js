@@ -7,12 +7,13 @@ import { initBurgerMenu } from './modules/burger-menu';
 // import { sliderThumbs, sliderImages } from './modules/swiper-slider';
 import { initSliderHero } from './modules/swiper-hero';
 // import { getSlider } from './modules/swiper-hero';
+// import { getHeroSlider } from './modules/swiper-hero';
 
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
-    initBurgerMenu();
-    // getSlider();
     initSliderHero();
+    initBurgerMenu();
+    // getHeroSlider()
   });
 });

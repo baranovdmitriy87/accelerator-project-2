@@ -4,12 +4,12 @@
   overflow: hidden;
 }
 
-.hero__bg-color {
+.hero-bg-color {
   height: 568px;
   background: $bg-color-hero;
 
   @media (min-width: $tablet-width) {
-    height: 1036px;
+    height: 1035px;
   }
 
   @media (min-width: $desktop-width) {
@@ -17,14 +17,14 @@
   }
 }
 
-.hero__picture {
+.hero__image {
   @media (min-width: $tablet-width) {
-    min-height: 1037px;
+    min-height: 1035px;
     object-fit: cover;
   }
 
   @media (min-width: $desktop-width) {
-    all: unset;
+    min-height: auto;
   }
 
 }
@@ -55,46 +55,6 @@
   justify-content: center;
   align-items: center;
 }
-
-.hero__content {
-  margin-bottom: 20px;
-}
-
-
-// .swiper-pagination {
-//   width: 100px;
-//   height: 20px;
-//   // position: absolute;
-//   top: 50%;
-//   left: 50%;
-// }
-
-// .hero__slider .hero__swiper-pagination {
-//   position: absolute;
-//   width: 100px;
-//   height: 20px;
-//   top: 50%;
-//   left: 50%;
-// }
-
-// .hero__slider .swiper-slide {
-//   width: 320px;
-//   display: flex;
-//   justify-content: center;
-
-//   @media (min-width: $tablet-width) {
-//     // width: 768px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     width: 1440px;
-//   }
-// }
-
-// .hero__slider .swiper-slide {
-//   display: flex;
-//   min-width: 0;
-// }
 
 .hero__slider .swiper-pagination {
   position: absolute;
@@ -139,7 +99,6 @@
   @include list-reset;
   margin: 0;
   display: flex;
-  justify-content: center;
 }
 
 .hero__item {
@@ -152,10 +111,12 @@
   padding: 40px 15px 40px 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 150px 45px 90px 45px;
+    width: 768px;
+    padding: 149px 45px 90px 45px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 1440px;
     padding: 200px 0px 80px 0px;
   }
 
@@ -177,11 +138,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 104px;
+  margin: 104px 0 20px;
+
 
   @media (min-width: $tablet-width) {
     width: 678px;
-    margin-top: 194px;
+    margin-top: 193px;
   }
 
   @media (min-width: $desktop-width) {
@@ -242,7 +204,7 @@
   @media (min-width: $tablet-width) {
     font-size: 56px;
     line-height: 56px;
-    margin: 0 0 13px 1px;
+    margin: 0 0 13px 0;
     // margin-bottom: 13px;
     // letter-spacing: -0.15px;
 
@@ -294,7 +256,7 @@
 }
 
 .hero__button {
-  width: 182px;
+  width: 180px;
   margin-top: 60px;
   min-height: 57px;
 
@@ -326,7 +288,7 @@
 
   &--lake {
     position: absolute;
-    bottom: 108px;
+    bottom: 210px;
     left: 163px;
 
     @media (min-width: $desktop-width) {
@@ -338,7 +300,7 @@
 
   &--tourist {
     position: absolute;
-    bottom: 94px;
+    bottom: 195px;
     right: 163px;
 
     @media (min-width: $desktop-width) {
@@ -348,17 +310,17 @@
   }
 }
 
-.hero__photo-cards-lake {
-  position: absolute;
-  top: 45px;
-  left: 80px;
-}
+// .hero__photo-cards-lake {
+//   position: absolute;
+//   top: 45px;
+//   left: 80px;
+// }
 
-.hero__photo-cards-tourist {
-  position: absolute;
-  top: 98px;
-  right: 78px;
-}
+// .hero__photo-cards-tourist {
+//   position: absolute;
+//   top: 98px;
+//   right: 78px;
+// }
 
 .hero__image-wrapper {
   z-index: -1;

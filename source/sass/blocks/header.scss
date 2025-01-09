@@ -47,6 +47,7 @@
 // burger menu
 .header__burger-menu {
   position: relative;
+
   @media (min-width: $desktop-width) {
     display: none;
   }
@@ -69,7 +70,13 @@
 
   &:hover,
   &:active {
+    background: transparent;
+    border: none;
     opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $base-white;
   }
 
   @media (min-width: $tablet-width) {

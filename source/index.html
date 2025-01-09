@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="preload" href="css/style.min.css" as="style">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
   <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Montserrat-Light.woff2" as="font" type="font/woff2" crossorigin>
@@ -22,11 +21,6 @@
 </head>
 
 <body class="page-body">
-  <!-- пример использования спрайта -->
-  <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-  <svg>
-    <use href="/__spritemap#sprite-user"></use>
-  </svg> -->
 
   <!--header-->
   <header class="header header--closed" data-test="header">
@@ -72,11 +66,45 @@
 
   <main class="main-page">
     <div class="overlay"></div>
-    <section class="hero hero__bg-color" data-test="hero">
-
+    <!-- hero -->
+    <section class="hero hero-bg-color" data-test="hero">
       <div class="hero__slider swiper-container">
         <ul class="hero__list hero__slider-wrapper swiper-wrapper">
 
+          <li class="hero__item hero__slide swiper-slide">
+            <div class="hero__content">
+              <h2>Захватывающие<br>вершины Кавказа</h2>
+              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
+                на&nbsp;вершину горы Чегет.</p>
+              <a class="hero__button button" href="#">Смотреть тур</a>
+              <div class="hero__details">
+                <span class="hero__details-data">
+                  <svg width="12" height="12" viewBox="0 0 12 12" role="img" focusable="false" aria-hidden="true">
+                    <use href="/__spritemap#sprite-moon"></use>
+                  </svg>
+                  6 дней/5 ночей
+                </span>
+                <span class="hero__details-level">
+                  <svg width="12" height="12" viewBox="0 0 12 12" role="img" focusable="false" aria-hidden="true">
+                    <use href="/__spritemap#sprite-level"></use>
+                  </svg>
+                  Высокая сложность
+                </span>
+              </div>
+            </div>
+
+            <div class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/hero/hero-desktop.webp 1x, ./img/hero/hero-desktop@2x.webp 2x" width="1440"
+                  height="800">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/hero/hero-tablet.webp 1x, ./img/hero/hero-tablet@2x.webp 2x" width="768" height="422">
+                <img class="hero__image" src="./img/hero/hero-mobile.jpg" alt="Кавказкие горы." width="320" height="568"
+                  srcset="./img/hero/hero-mobile@2x.jpg 2x" loading="lazy">
+              </picture>
+            </div>
+          </li>
           <li class="hero__item hero__item--kam hero__slide swiper-slide">
             <div class="hero__content hero__content--kam">
               <h2>Невероятная<br>природа Камчатки</h2>
@@ -142,40 +170,6 @@
           </li>
           <li class="hero__item hero__slide swiper-slide">
             <div class="hero__content">
-              <h2>Захватывающие<br>вершины Кавказа</h2>
-              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
-                на&nbsp;вершину горы Чегет.</p>
-              <a class="hero__button button" href="#">Смотреть тур</a>
-              <div class="hero__details">
-                <span class="hero__details-data">
-                  <svg width="12" height="12" viewBox="0 0 12 12" role="img" focusable="false" aria-hidden="true">
-                    <use href="/__spritemap#sprite-moon"></use>
-                  </svg>
-                  6 дней/5 ночей
-                </span>
-                <span class="hero__details-level">
-                  <svg width="12" height="12" viewBox="0 0 12 12" role="img" focusable="false" aria-hidden="true">
-                    <use href="/__spritemap#sprite-level"></use>
-                  </svg>
-                  Высокая сложность
-                </span>
-              </div>
-            </div>
-
-            <div class="hero__image-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="./img/hero/hero-desktop.webp 1x, ./img/hero/hero-desktop@2x.webp 2x" width="1440"
-                  height="800">
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="./img/hero/hero-tablet.webp 1x, ./img/hero/hero-tablet@2x.webp 2x" width="768" height="422">
-                <img class="hero__picture" src="./img/hero/hero-mobile.jpg" alt="Кавказкие горы." width="320"
-                  height="568" srcset="./img/hero/hero-mobile@2x.jpg 2x" loading="lazy">
-              </picture>
-            </div>
-          </li>
-          <li class="hero__item hero__slide swiper-slide">
-            <div class="hero__content">
               <h2>Магические пейзажи Алтайского Края</h2>
               <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих
                 дух ландшафтов Алтайских гор.</p>
@@ -204,8 +198,8 @@
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="./img/hero/hero-tablet-alt.webp 1x, ./img/hero/hero-tablet-alt@2x.webp 2x" width="768"
                   height="422">
-                <img class="hero__picture" src="./img/hero/hero-mobile-alt.jpg" alt="Горы Алтая." width="320"
-                  height="568" srcset="./img/hero/hero-mobile-alt@2x.jpg 2x" loading="lazy">
+                <img class="hero__image" src="./img/hero/hero-mobile-alt.jpg" alt="Горы Алтая." width="320" height="568"
+                  srcset="./img/hero/hero-mobile-alt@2x.jpg 2x" loading="lazy">
               </picture>
             </div>
           </li>
@@ -213,9 +207,9 @@
         <div class="hero__swiper-pagination swiper-pagination">
         </div>
       </div>
-
     </section>
 
+    <!-- feedback -->
     <section class="feedback" id="feedback" data-test="form">
       <div class="feedback__container container">
         <h2>Остались вопросы?</h2>
@@ -223,12 +217,14 @@
         <div class="feedback__form-container" data-form-validate="data-form-validate" data-callback="base">
           <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post"
             data-form-feedback="data-form-feedback">
-            <div class="feedback__form-input feedback__form-input--phone" data-validate-type="phone" data-required="data-required">
+            <div class="feedback__form-input feedback__form-input--phone" data-validate-type="phone"
+              data-required="data-required">
               <label aria-label="Введите ваш номер телефона.">
                 <input type="tel" name="phone" placeholder="Телефон" autocomplete="off" required>
               </label>
             </div>
-            <div class="feedback__form-input feedback__form-input--email" data-validate-type="email" data-required="data-required">
+            <div class="feedback__form-input feedback__form-input--email" data-validate-type="email"
+              data-required="data-required">
               <label aria-label="Введите вашу электронную почту.">
                 <input type="email" name="email" placeholder="Email" autocomplete="off" required>
               </label>
@@ -245,19 +241,130 @@
         <source type="image/webp" media="(min-width: 768px)"
           srcset="./img/feedback/feedback-form-tablet.webp, ./img/feedback/feedback-form-tablet@2x.webp 2x" width="768"
           height="422">
-        <img class="feedback-form__picture" src="./img/feedback/feedback-form-mobile.jpg" alt="Хвойный лес в облаках"
-          width="320" height="568" srcset="./img/feedback/feedback-form-mobile@2x.jpg 2x" loading="lazy">
+        <img src="./img/feedback/feedback-form-mobile.jpg" alt="Хвойный лес в облаках" width="320" height="568"
+          srcset="./img/feedback/feedback-form-mobile@2x.jpg 2x" loading="lazy">
       </picture>
     </section>
-
   </main>
+
+  <!-- footer -->
+  <footer class="footer contacts" id="footer" data-test="footer">
+
+    <section class="contacts" id="contacts">
+      <div class="contacts__container container">
+        <div class="contacts__content">
+          <h2 class="contacts__title" data-shadow="Контакты">Контакты</h2>
+          <div class="contacts__body-text">
+            <p class="contacts__text contacts__text-message">Свяжитесь с&nbsp;нами любым удобным для вас способом или
+              приходите
+              к&nbsp;нам в гости. Мы&nbsp;будем рады поделиться увлекательными историями и&nbsp;подобрать для вас
+              тур.</p>
+          </div>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <svg width="22" height="22" viewBox="0 0 22 22" role="img" focusable="false" aria-hidden="true">
+                <use href="/__spritemap#sprite-phone"></use>
+              </svg>
+              <p class="contacts__subtitle">Телефон</p>
+              <a class="contacts__text" href="tel:89837454545">+7 983 745-45-45</a>
+            </li>
+            <li class="contacts__item">
+              <svg width="22" height="22" viewBox="0 0 22 22" role="img" focusable="false" aria-hidden="true">
+                <use href="/__spritemap#sprite-mail"></use>
+              </svg>
+              <p class="contacts__subtitle">Email</p>
+              <a class="contacts__text" href="mailto:info@lifetour.com">info@lifetour.com</a>
+            </li>
+            <li class="contacts__item">
+              <svg width="22" height="22" viewBox="0 0 22 22" role="img" focusable="false" aria-hidden="true">
+                <use href="/__spritemap#sprite-location"></use>
+              </svg>
+              <p class="contacts__subtitle">Адрес</p>
+              <p class="contacts__text contacts__adress">г. Москва, пр-т Мира, д.&nbsp;14, офис 101</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contacts__map" id="map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="./img/map/map-desktop.webp, ./img/map/map-desktop@2x.webp 2x" width="678" height="340">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="./img/map/map-tablet.webp, ./img/map/map-tablet@2x.webp 2x" width="290" height="320">
+          <img src="./img/map/map-mobile.jpg" srcset="./img/map/map-mobile@2x.jpg 2x" width="320" height="343"
+            alt="Адрес магазина на карте." loading="lazy">
+        </picture>
+      </div>
+    </section>
+
+    <div class="footer__container container">
+      <div class="footer__logo-wrapper">
+        <a class="footer__logo-link" href="index.html" aria-label="На главную страницу">
+          <img src="/img/footerlogo.svg" width="142" height="42" loading="lazy" alt="Логотип Lifetour">
+        </a>
+      </div>
+      <div class="footer__top">
+        <ul class="footer__list footer__list--left">
+          <li class="footer__item">
+            <a class="footer__link" href="#tours">Туры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#coaching">Обучение</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#about">О нас</a>
+          </li>
+        </ul>
+        <ul class="footer__list footer__list--right">
+          <li class="footer__item">
+            <a class="footer__link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#gallery">Фотографии</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <a class="footer__tel" href="tel:88007253232">8 800 725 32 32</a>
+      </div>
+      <section class="footer__social">
+        <h2 class="visually-hidden">Социальные сети.</h2>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#!" aria-label="ВКонтакте">
+              <svg width="16" height="9" viewBox="0 0 16 9" role="img" focusable="false" aria-hidden="true">
+                <use href="/__spritemap#sprite-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#!" aria-label="Одноклассники">
+              <svg width="9" height="16" viewBox="0 0 9 16" role="img" focusable="false" aria-hidden="true">
+                <use href="/__spritemap#sprite-ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#!" aria-label="Reddit">
+              <svg width="14" height="15" viewBox="0 0 14 15" role="img" focusable="false" aria-hidden="true">
+                <use href="/__spritemap#sprite-reddit"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <a class="footer__politics" href="#!">Политика конфиденциальности</a>
+    </div>
+  </footer>
   <!-- <div id="tours" data-test="tours" style="height: 100vh;">tours</div>
   <div id="training" data-test="training" style="height: 100vh;">training</div>
   <div id="about" data-test="about" style="height: 100vh;">about</div>
   <div id="reviews" data-test="reviews" style="height: 100vh;">reviews</div>
   <div id="adv" data-test="adv">adv</div>
-  <div id="gallery" data-test="gallery">gallery</div>
-  <div id="footer" data-test="footer">footer</div> -->
+  <div id="gallery" data-test="gallery">gallery</div>-->
+
+
   <script type="module" src="js/main.js"></script>
 </body>
 
