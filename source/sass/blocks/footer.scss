@@ -9,7 +9,7 @@
 }
 
 .footer__logo-wrapper {
-  margin: 0 0 17px;
+  margin: 0 0 15px;
 }
 
 .footer__logo-link:hover {
@@ -39,14 +39,13 @@
 }
 
 .footer__top {
-  padding: 0 23px;
-  gap: 88px;
+  padding: 0 18px;
+  gap: 75px;
   width: 100%;
-  // width: 290px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0 0 21px;
+  margin: 0 0 19px;
 }
 
 .footer__list {
@@ -54,15 +53,40 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
-  gap: 10px;
+  gap: 7px;
 }
 
-.footer__item {}
-
 .footer__link {
+  position: relative;
+  display: inline-block;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
+  padding: 4px 6px;
+
+  &:focus-visible {
+    outline-offset: -2px;
+    outline: 1px solid $base-primery;
+  }
+
+  &:active {
+    color: $base-additional;
+    outline: unset;
+  }
+
+  &::after {
+    @include hover-nav-link;
+    background-color: $base-primery;
+  }
+}
+
+.footer__link:hover::after {
+  width: 100%;
+}
+
+.footer__link:active::after {
+  width: 0%;
+  transition: width 0s ease-in-out;
 }
 
 .footer__social-list {
@@ -79,7 +103,30 @@
 .footer__social-item {
   width: 30px;
   height: 30px;
+
+  // &:hover {
+  //   transition: all 0.2s ease;
+  //   outline: 1px solid $base-primery;
+  // }
 }
+
+// .footer__social-item {
+
+//   &:active {
+
+//     &--vk {
+//       background-color: $base-additional;
+//     }
+
+//     &--ok {
+//       background-color: $color-bg-ok;
+//     }
+
+//     &--reddit {
+//       background-color: $color-bg-reddit;
+//     }
+//   }
+// }
 
 .footer__social-link {
   width: 100%;
@@ -89,10 +136,51 @@
   justify-content: center;
   align-items: center;
   border: 1px solid $color-grey;
+
+  &:hover {
+    transition: all 0.2s ease;
+    border: 1px solid $base-primery;
+  }
+
+  &:focus-visible {
+    @include focus;
+  }
+
+  &:active {
+    color: $base-white;
+    border: none;
+  }
+}
+
+.footer__social-link {
+
+  &--vk:active {
+    background: $base-additional;
+  }
+
+  &--ok:active {
+    background: $color-bg-ok;
+
+  }
+
+  &--reddit:active {
+    background: $color-bg-reddit;
+  }
 }
 
 .footer__politics {
   font-size: 12px;
   font-weight: 300;
   line-height: 12px;
+
+  &:hover {
+    transition: all 0.3s ease;
+    color: $btn-links-conditions;
+  }
+
+  &:focus-visible {
+    @include focus;
+    color: $btn-links-conditions;
+    transition: all 0.3s ease;
+  }
 }

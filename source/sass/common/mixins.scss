@@ -17,6 +17,24 @@
   cursor: pointer;
 }
 
+@mixin focus {
+  border: none;
+  outline: unset;
+  background: transparent;
+}
+
+@mixin hover-nav-link {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 2px;
+  height: 1px;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  transition: 0.25s;
+}
+
 @mixin disabled {
 
   &:disabled,
@@ -24,4 +42,3 @@
     @content;
   }
 }
-
