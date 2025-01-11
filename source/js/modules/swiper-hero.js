@@ -13,6 +13,8 @@ const initSliderHero = () => {
 
     pagination: {
       el: '.swiper-pagination',
+      clickable: false,
+
     },
 
     breakpoints: {

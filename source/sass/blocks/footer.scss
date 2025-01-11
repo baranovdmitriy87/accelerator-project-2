@@ -6,10 +6,16 @@
   flex-direction: column;
   align-items: center;
   // gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 34px 36px;
+  }
 }
 
 .footer__logo-wrapper {
-  margin: 0 0 15px;
+  @media (max-width: $mobile-width-only) {
+    margin: 0 0 15px;
+  }
 }
 
 .footer__logo-link:hover {
@@ -33,27 +39,48 @@
 }
 
 .footer__tel {
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $tablet-width-only) {
     display: none;
   }
 }
 
+.footer__list-wrapper {
+  display: flex;
+  width: 340px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    flex-direction: row;
+  }
+
+}
+
 .footer__top {
-  padding: 0 18px;
-  gap: 75px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 0 0 19px;
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .footer__list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
   gap: 7px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .footer__link {
@@ -78,6 +105,11 @@
     @include hover-nav-link;
     background-color: $base-primery;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .footer__link:hover::after {
@@ -89,44 +121,26 @@
   transition: width 0s ease-in-out;
 }
 
+.footer__social {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer__social-list {
   width: 100%;
   margin: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   margin: 0 0 23px;
-
 }
 
 .footer__social-item {
   width: 30px;
   height: 30px;
-
-  // &:hover {
-  //   transition: all 0.2s ease;
-  //   outline: 1px solid $base-primery;
-  // }
 }
-
-// .footer__social-item {
-
-//   &:active {
-
-//     &--vk {
-//       background-color: $base-additional;
-//     }
-
-//     &--ok {
-//       background-color: $color-bg-ok;
-//     }
-
-//     &--reddit {
-//       background-color: $color-bg-reddit;
-//     }
-//   }
-// }
 
 .footer__social-link {
   width: 100%;

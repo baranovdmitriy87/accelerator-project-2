@@ -84,6 +84,24 @@
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid $base-white;
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      outline: 1px solid rgb(128, 179, 224);
+      outline-offset: 2px;
+      border: 1px solid $base-white;
+    }
+
+    &:focus {
+      outline-offset: -2px;
+    }
+
+    &:active {
+      outline: unset;
+      background-color: rgb(128, 179, 224);
+      border: 1px solid $base-white;
+    }
+  }
 }
 
 .hero__swiper-pagination .swiper-pagination-bullet-active {
@@ -173,7 +191,6 @@
     font-size: 17px;
     line-height: 24px;
     margin-left: 1px;
-    // letter-spacing: -0.03px;
   }
 
   @media (min-width: $desktop-width) {
@@ -265,22 +282,6 @@
   }
 }
 
-// .hero__photo-cards-container {
-//   @media (max-width: $mobile-width-only) {
-//     display: none;
-//   }
-
-//   @media (min-width: $tablet-width) {
-//     width: 600px;
-//     height: 288px;
-//     height: auto;
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//   }
-
-// }
-
 .hero__photo-cards {
   @media (max-width: $mobile-width-only) {
     display: none;
@@ -310,28 +311,8 @@
   }
 }
 
-// .hero__photo-cards-lake {
-//   position: absolute;
-//   top: 45px;
-//   left: 80px;
-// }
-
-// .hero__photo-cards-tourist {
-//   position: absolute;
-//   top: 98px;
-//   right: 78px;
-// }
-
 .hero__image-wrapper {
   z-index: -1;
   position: absolute;
   top: 0;
-
-  // @media (min-width: $tablet-width) {
-  //   // top: 86px;
-  // }
-
-  // @media (min-width: $desktop-width) {
-  //   // top: 0;
-  // }
 }
