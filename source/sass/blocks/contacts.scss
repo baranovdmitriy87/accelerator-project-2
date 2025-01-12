@@ -1,19 +1,27 @@
 .contacts {
+  position: relative;
   padding-bottom: 14px;
   border-bottom: 1px solid $color-grey;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     padding-bottom: 34px;
+  }
+
+  @include vp-1440 {
+    padding-bottom: 78px;
   }
 }
 
 .contacts__container {
   padding: 37px 15px 14px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     padding: 60px 45px 24px;
   }
 
+  @include vp-1440 {
+    padding: 130px 120px 0;
+  }
 }
 
 .contacts__title {
@@ -38,18 +46,27 @@
     opacity: 0.2;
     z-index: -1;
 
-    @media (min-width: $tablet-width) {
+    @include vp-768 {
       top: -6px;
       left: -3px;
       font-size: 41px;
     }
+
+    @include vp-1440 {
+      font-size: 55px;
+    }
+
+    @include vp-768 {
+      font-size: 25px;
+      line-height: 25px;
+      margin: 0 0 21px;
+
+    }
   }
 
-  @media (min-width: $tablet-width) {
-    font-size: 25px;
-    line-height: 25px;
-    margin: 0 0 21px;
-
+  @include vp-1440 {
+    font-size: 35px;
+    margin: 0 0 29px;
   }
 }
 
@@ -60,10 +77,16 @@
   font-weight: 400;
   line-height: 20px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     font-size: 14px;
     line-height: 22px;
   }
+
+  @include vp-1440 {
+    font-size: 16px;
+    width: auto;
+  }
+
 }
 
 .contacts__text-message {
@@ -71,7 +94,7 @@
   margin: 0 0 30px;
   letter-spacing: -0.05px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     width: 484px;
     font-size: 16px;
     line-height: 24px;
@@ -79,7 +102,7 @@
 
   }
 
-  @media (min-width: $desktop-width) {}
+  @include vp-1440 {}
 
 }
 
@@ -90,15 +113,16 @@
   text-align: left;
   margin: 0 0 8px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     font-size: 16px;
     line-height: 16px;
     margin: 0 0 5px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     font-size: 18px;
     line-height: 18px;
+    margin: 0 0 10px;
 
   }
 }
@@ -107,7 +131,7 @@
   width: 190px;
   letter-spacing: -0.18px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     width: auto;
   }
 }
@@ -118,10 +142,16 @@
   flex-direction: column;
   gap: 30px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     justify-content: flex-start;
     flex-direction: row;
     gap: 34px;
+  }
+
+  @include vp-1440 {
+    width: 50%;
+    flex-direction: column;
+    gap: 26px;
   }
 }
 
@@ -130,9 +160,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 32px;
+  margin: 0 0 0 32px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {}
+
+  @include vp-1440 {
+    margin: 9px 0 0 56px;
   }
 }
 
@@ -140,9 +173,24 @@
   position: absolute;
   top: 0;
   left: -32px;
+
+  @include vp-1440 {
+    width: 26px;
+    height: 26px;
+    top: 13px;
+    left: -55px;
+  }
 }
 
 .contacts__map img {
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     width: 768px;
-  }}
+  }
+
+  @include vp-1440 {
+    position: absolute;
+    width: 600px;
+    top: 149px;
+    right: 120px;
+  }
+}

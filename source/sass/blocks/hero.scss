@@ -8,22 +8,22 @@
   height: 568px;
   background: $bg-color-hero;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     height: 1035px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     height: 800px;
   }
 }
 
 .hero__image {
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     min-height: 1035px;
     object-fit: cover;
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     min-height: auto;
   }
 
@@ -40,11 +40,11 @@
   align-items: center;
   // overflow: hidden;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     width: 768px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     width: 1440px;
   }
 }
@@ -65,7 +65,7 @@
   gap: 20px;
   z-index: 2;
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     top: 688px;
     left: -120px;
     justify-content: flex-end;
@@ -73,7 +73,7 @@
 }
 
 .hero__slider .swiper-pagination-bullet {
-  @media (max-width: $mobile-width-only) {
+  @include vp-767 {
     width: 16px;
     height: 16px;
   }
@@ -85,7 +85,7 @@
   background-color: transparent;
   border: 1px solid $base-white;
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     &:hover {
       outline: 1px solid rgb(128, 179, 224);
       outline-offset: 2px;
@@ -128,12 +128,12 @@
   align-items: center;
   padding: 40px 15px 40px 15px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     width: 768px;
     padding: 149px 45px 90px 45px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     width: 1440px;
     padding: 200px 0px 80px 0px;
   }
@@ -141,11 +141,11 @@
   &--kam {
     position: relative;
 
-    @media (min-width: $tablet-width) {
+    @include vp-768 {
       padding: 137px 45px 90px 45px;
     }
 
-    @media (min-width: $desktop-width) {
+    @include vp-1440 {
       padding: 200px 45px 90px 45px;
     }
   }
@@ -159,19 +159,19 @@
   margin: 104px 0 20px;
 
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     width: 678px;
     margin-top: 193px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     width: 1202px;
     margin: 0;
     align-items: flex-start;
   }
 
   &--kam {
-    @media (min-width: $tablet-width) {
+    @include vp-768 {
       margin: 0;
     }
   }
@@ -186,14 +186,14 @@
   text-align: center;
   margin: 0;
 
-  @media (min-width: $tablet-width) {
+ @include vp-768 {
     width: 474px;
     font-size: 17px;
     line-height: 24px;
     margin-left: 1px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     width: 472px;
     font-size: 17px;
     line-height: 24px;
@@ -202,7 +202,7 @@
 }
 
 .hero__content--kam p {
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     br {
       display: none;
     }
@@ -218,7 +218,7 @@
   text-align: center;
   margin: 0 auto 15px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     font-size: 56px;
     line-height: 56px;
     margin: 0 0 13px 0;
@@ -227,7 +227,7 @@
 
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     // width: 820px;
     font-size: 77px;
     line-height: 77px;
@@ -239,11 +239,11 @@
 }
 
 .hero__details {
-  @media (max-width: $tablet-width-only) {
+  @include vp-1439 {
     display: none;
   }
 
-  @media (min-width: $desktop-width) {
+  @include vp-1440 {
     margin-top: 133px;
     width: 100%;
     display: flex;
@@ -277,13 +277,13 @@
   margin-top: 60px;
   min-height: 57px;
 
-  @media (min-width: $tablet-width) {
+  @include vp-768 {
     margin-top: 37px;
   }
 }
 
 .hero__photo-cards {
-  @media (max-width: $mobile-width-only) {
+  @include vp-767 {
     display: none;
   }
 
@@ -292,7 +292,7 @@
     bottom: 210px;
     left: 163px;
 
-    @media (min-width: $desktop-width) {
+    @include vp-1440 {
       top: 187px;
       left: 910px;
       z-index: 5;
@@ -304,7 +304,7 @@
     bottom: 195px;
     right: 163px;
 
-    @media (min-width: $desktop-width) {
+    @include vp-1440 {
       top: 279px;
       right: 119px;
     }
