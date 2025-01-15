@@ -66,11 +66,11 @@
 
   <main class="main-page">
     <div class="overlay"></div>
+
     <!-- hero -->
     <section class="hero hero-bg-color" data-test="hero">
-      <div class="hero__slider swiper-container">
+      <div class="hero__slider swiper-container" data-hero-slider>
         <ul class="hero__list hero__slider-wrapper swiper-wrapper">
-
           <li class="hero__item hero__slide swiper-slide">
             <div class="hero__content">
               <h2>Захватывающие<br>вершины Кавказа</h2>
@@ -204,9 +204,183 @@
             </div>
           </li>
         </ul>
-        <div class="hero__swiper-pagination swiper-pagination">
+        <div class="hero__swiper-pagination swiper-pagination" data-hero-pagination>
         </div>
       </div>
+    </section>
+
+    <!-- about -->
+    <section class="about container" id="about" data-test="about">
+      <div class="about__img">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="./img/about/about-desktop.webp, ./img/about/about-desktop@2x.webp 2x" width="660" height="498">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="./img/about/about-tablet.webp, ./img/about/about-tablet@2x.webp 2x" width="542" height="360">
+          <img src="./img/about/about-mobile.jpg" alt="Группа туристов, идущая по горам" width="434" height="400"
+            srcset="./img/about/about-mobile@2x.jpg 2x" loading="lazy">
+        </picture>
+      </div>
+      <div class="about__container container">
+        <div class="about__content">
+          <h2 class="about__title" data-shadow="О нас">О нас</h2>
+          <div class="about__body">
+            <h3 class="about__subtitle">История компании</h3>
+            <p class="about__desc">В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения,
+              нам это настолько понравилось, что мы этим стали жить. Спустя&nbsp;5 лет, в 2005 году мы основали
+              компанию,
+              чтобы показывать людям удивительные места нашей страны.</p>
+            <h3 class="about__subtitle">Наша цель</h3>
+            <p class="about__desc">Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя
+              все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только
+              наслаждаться незабываемым приключением в приятной компании.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews -->
+    <section class="reviews" id="reviews" data-test="reviews">
+      <div class="reviews__container container">
+        <div class="reviews__top">
+          <h2 class="reviews__header" data-shadow="Отзывы">Отзывы</h2>
+          <!-- <div class="reviews__arrows arrows"> -->
+          <div class="reviews__arrows">
+            <button class="reviews__prev arrow" type="button" aria-label="Предыдущий слайд." data-reviews-prev>
+              <svg class="arrow__icon" width="14" height="9" viewBox="0 0 14 9" role="img" focusable="false"
+                aria-hidden="true">
+                <use href="/__spritemap#sprite-arrow-prev"></use>
+              </svg>
+            </button>
+            <button class="reviews__next arrow" type="button" aria-label="Следующий слайд." data-reviews-next>
+              <svg class="arrow__icon" width="14" height="9" viewBox="0 0 14 9" role="img" focusable="false"
+                aria-hidden="true">
+                <use href="/__spritemap#sprite-arrow-next"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="reviews__slider swiper-container" data-reviews-slider>
+          <ul class="reviews__list swiper-wrapper">
+            <li class="reviews__item swiper-slide">
+
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/hero/hero-desktop-alt.webp 1x, ./img/hero/hero-desktop-alt@2x.webp 2x" width="1440"
+                  height="800">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/hero/hero-tablet-alt.webp 1x, ./img/hero/hero-tablet-alt@2x.webp 2x" width="768"
+                  height="422">
+                <img class="hero__image" src="./img/reviews/review-photo-01-mobile.jpg" alt="Мужчина в красной куртке."
+                  width="250" height="169" srcset="./img/reviews/review-photo-01-mobile@2x.jpg 2x" loading="lazy">
+              </picture>
+
+              <div class="reviews__content">
+                <div class="reviews__text">
+                  <p class="reviews__text-message"> Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие!
+                    Инструкторы, настоящие эксперты,
+                    всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
+                  <p class="reviews__text-message">С уверенностью могу сказать, что жизнь разделилась на до этого
+                    и после. Ещё никогда не отдыхал
+                    так душой и телом. Всем очень рекомендую!</p>
+                </div>
+                <p class="reviews__info">
+                  <span class="reviews__name">Фролов Александр</span>
+                  38&nbsp;лет, Москва
+                </p>
+              </div>
+            </li>
+            <li class="reviews__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/hero/hero-desktop-alt.webp 1x, ./img/hero/hero-desktop-alt@2x.webp 2x" width="1440"
+                  height="800">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/hero/hero-tablet-alt.webp 1x, ./img/hero/hero-tablet-alt@2x.webp 2x" width="768"
+                  height="422">
+                <img class="hero__image" src="./img/reviews/review-photo-02-mobile.jpg" alt="Мужчина, стоящий на камне."
+                  width="250" height="169" srcset="./img/reviews/review-photo-02-mobile@2x.jpg 2x" loading="lazy">
+              </picture>
+              <div class="reviews__content">
+                <div class="reviews__text">
+                  <p class="reviews__text-message">Хороший полноценный поход с разнообразными локациями. В начале
+                    дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков
+                    дач конца 19 века.Было очень интересно!
+                  </p>
+                  <p class="reviews__text-message">Инструктор Федор дружелюбный, внимательный к технике безопасности
+                    и своим туристам.Всем советую
+                    этот тур.</p>
+                </div>
+                <p class="reviews__info">
+                  <span class="reviews__name">Иван Соловьев</span>
+                  25&nbsp;лет, Владивосток
+                </p>
+              </div>
+            </li>
+            <li class="reviews__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/hero/hero-desktop-alt.webp 1x, ./img/hero/hero-desktop-alt@2x.webp 2x" width="1440"
+                  height="800">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/hero/hero-tablet-alt.webp 1x, ./img/hero/hero-tablet-alt@2x.webp 2x" width="768"
+                  height="422">
+                <img class="hero__image" src="./img/reviews/review-photo-03-mobile.jpg"
+                  alt="Девушка в сине-желтой куртке." width="250" height="169"
+                  srcset="./img/reviews/review-photo-03-mobile@2x.jpg 2x" loading="lazy">
+              </picture>
+              <div class="reviews__content">
+                <div class="reviews__text">
+                  <p class="reviews__text-message">Ранее не ходила на такие длинные дистанции. В первый день прошли
+                    около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца.
+                    Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.
+                  </p>
+                  <p class="reviews__text-message">Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада
+                    быть в такой компании.</p>
+                </div>
+                <p class="reviews__info">
+                  <span class="reviews__name">Евгения Баженова</span>
+                  23&nbsp;года, Кострома
+                </p>
+              </div>
+            </li>
+            <li class="reviews__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/hero/hero-desktop-alt.webp 1x, ./img/hero/hero-desktop-alt@2x.webp 2x" width="1440"
+                  height="800">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/hero/hero-tablet-alt.webp 1x, ./img/hero/hero-tablet-alt@2x.webp 2x" width="768"
+                  height="422">
+                <img class="hero__image" src="./img/reviews/review-photo-04-mobile.jpg"
+                  alt="Девушка в очках на фоне гор." width="250" height="169"
+                  srcset="./img/reviews/review-photo-04-mobile@2x.jpg 2x" loading="lazy">
+              </picture>
+              <div class="reviews__content">
+                <div class="reviews__text">
+                  <p class="reviews__text-message">Это был опыт, изменивший мою жизнь! Думала, не справлюсь,
+                    но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия,
+                    взбираешься на вершину.
+                  </p>
+                  <p class="reviews__text-message">У нас собралась потрясающая команда. Все друг друга поддерживали,
+                    по вечерам мы сидели вместе
+                    у костра и пели песни. Обязательно повторю такое приключение!</p>
+                </div>
+                <p class="reviews__info">
+                  <span class="reviews__name">Елена Пирогова</span>
+                  37&nbsp;лет, Тюмень
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <picture aria-hidden="true">
+        <source type="image/webp" srcset="./img/reviews/reviews-background-cloud.webp, ./img/reviews/reviews-background-cloud.webp 2x"
+          width="705" height="391">
+        <img src="./img/reviews/reviews-background-cloud.jpg" srcset="./img/reviews/reviews-background-cloud.jpg 2x" width="705"
+          height="391" alt="Облако на фоне." loading="lazy">
+      </picture>
     </section>
 
     <!-- feedback -->
@@ -246,39 +420,9 @@
       </picture>
     </section>
 
-    <!-- about -->
-    <section class="about" id="about" data-test="about">
-      <div class="about__img">
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="./img/about/about-desktop.webp, ./img/about/about-desktop@2x.webp 2x" width="660" height="498">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="./img/about/about-tablet.webp, ./img/about/about-tablet@2x.webp 2x" width="542" height="360">
-          <img src="./img/about/about-mobile.jpg" alt="Группа туристов, идущая по горам" width="434" height="400"
-            srcset="./img/about/about-mobile@2x.jpg 2x" loading="lazy">
-        </picture>
-      </div>
-      <div class="about__container container">
-        <div class="about__content">
-          <h2 class="about__title" data-shadow="О нас">О нас</h2>
-          <div class="about__body">
-            <h3 class="about__subtitle">История компании</h3>
-            <p class="about__desc">В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения,
-              нам это настолько понравилось, что мы этим стали жить. Спустя&nbsp;5 лет, в 2005 году мы основали
-              компанию,
-              чтобы показывать людям удивительные места нашей страны.</p>
-            <h3 class="about__subtitle">Наша цель</h3>
-            <p class="about__desc">Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя
-              все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только
-              наслаждаться незабываемым приключением в приятной компании.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- footer -->
+  <!-- footer contacts -->
   <footer class="footer contacts" id="footer" data-test="footer">
 
     <section class="contacts" id="contacts">
@@ -297,14 +441,14 @@
                 <use href="/__spritemap#sprite-phone"></use>
               </svg>
               <p class="contacts__subtitle">Телефон</p>
-              <a class="contacts__text" href="tel:89837454545">+7 983 745-45-45</a>
+              <a class="contacts__text contacts__text-link" href="tel:89837454545">+7 983 745-45-45</a>
             </li>
             <li class="contacts__item">
               <svg width="22" height="22" viewBox="0 0 22 22" role="img" focusable="false" aria-hidden="true">
                 <use href="/__spritemap#sprite-mail"></use>
               </svg>
               <p class="contacts__subtitle">Email</p>
-              <a class="contacts__text" href="mailto:info@lifetour.com">info@lifetour.com</a>
+              <a class="contacts__text contacts__text-link" href="mailto:info@lifetour.com">info@lifetour.com</a>
             </li>
             <li class="contacts__item">
               <svg width="22" height="22" viewBox="0 0 22 22" role="img" focusable="false" aria-hidden="true">
@@ -359,8 +503,8 @@
             </li>
           </ul>
         </div>
-        <div class="footer__tel-wrapper">
-          <a class="footer__tel-link" href="tel:88007253232">8 800 725 32 32</a>
+        <div class="footer__phone-wrapper">
+          <a class="footer__phone-link" href="tel:88007253232">8 800 725 32 32</a>
         </div>
       </div>
       <section class="footer__social">

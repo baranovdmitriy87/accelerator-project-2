@@ -39,15 +39,10 @@
   }
 
   &::after {
-    @include hover-nav-link;
+    @include hover-link;
     background-color: $base-white;
   }
 }
-
-// .site-list__link::after {
-//   @include hover-nav-link;
-//   background-color: $base-white;
-// }
 
 .site-list__link:hover::after {
   width: 100%;

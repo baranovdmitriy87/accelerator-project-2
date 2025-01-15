@@ -11,9 +11,7 @@
   @include vp-1440 {
     padding: 100px 0 100px;
     grid-template-columns: repeat(2, 660px );
-
   }
-
 }
 
 .about__img {
@@ -26,9 +24,6 @@
     width: 660px;
     margin: 0;
   }
-
-
-
 }
 
 .about__title {
@@ -89,20 +84,7 @@
   @include vp-1440 {
     padding: 50px 60px 0 0;
   }
-
-
 }
-
-// .about__content {
-
-//   @include vp-768 {
-//     grid-column: 2/3;
-//   }
-
-//   @include vp-1440 {
-//     max-width: calc(42vw + 2px);
-//   }
-// }
 
 .about__subtitle {
   margin: 0 0 13px;

@@ -48,7 +48,7 @@
   background: transparent;
 }
 
-@mixin hover-nav-link {
+@mixin hover-link {
   position: absolute;
   display: block;
   content: "";
@@ -58,6 +58,11 @@
   width: 0%;
   transform: translateX(-50%);
   transition: 0.25s;
+}
+
+// transition
+@mixin transition {
+  transition: all 0.2s ease-in-out;
 }
 
 @mixin disabled {

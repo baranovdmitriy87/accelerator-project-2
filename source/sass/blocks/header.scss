@@ -149,6 +149,7 @@
 }
 
 .header__phone-link {
+  @include transition;
   font-family: $montserrat;
   font-size: 14px;
   font-weight: 600;

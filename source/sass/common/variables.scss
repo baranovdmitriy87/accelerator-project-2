@@ -3,20 +3,22 @@ $montserrat: "Montserrat", "Arial", sans-serif;
 
 // Base colors
 $base-primery: #2d383f;
-$base-additional: #0266C1;
-$base-white: #ffffff;
-$base-black: #000000;
+$base-additional: #0266c1;
+$base-additional-opacity: rgba(2, 102, 193, 0.1);
+$base-white: rgb(255, 255, 255);
+$base-black: rgb(0, 0, 0);
 
 // Other colors
-$color-elephant: rgb(101, 119, 146);
+$color-elephant: #657792;
 $color-resolution-blue: #1c3374;
 $color-resolution-blue-10: rgba(28, 51, 116, 0.1);
 $color-transparent: rgba(255, 255, 255, 0);
 $color-torch-red: #ff121f;
-$color-grey: #2d383f4d;
+$color-grey: rgba(45, 56, 63, 0.302);
 $color-whisper: #e8e8e8;
 $color-bg-ok: #ff9800;
 $color-bg-reddit: #ff5722;
+$color-active: rgb(28, 51, 116);
 
 // Conditions
 $link-disabled-blue: rgb(153, 153, 153);
@@ -27,7 +29,6 @@ $btn-links-conditions: rgb(28, 51, 116);
 
 // overlay colors
 $bg-color-hero: linear-gradient(175deg, rgb(121 154 188) 49%, rgb(109 80 35) 121%);
-;
 $color-overlay-slider-hero: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 13%, rgba(15, 20, 41, 0) 96%);
 // background: linear-gradient(142.94deg, rgba(15, 20, 41, 0.33) 11.202%,rgba(15, 20, 41, 0) 100.522%),url(image);
 // background: linear-gradient(142.94deg, rgba(15, 20, 41, 0.33) 12.38%,rgba(15, 20, 41, 0) 99.428%),url(image);

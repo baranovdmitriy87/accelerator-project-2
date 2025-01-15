@@ -1,18 +1,21 @@
 import Swiper from 'swiper';
 import { Pagination } from "swiper/modules";
+import {isMobileDevice} from '../utils/is-mobile-device';
+
 
 
 Swiper.use([Pagination]);
 
 const initSliderHero = () => {
-  const mySwiper = new Swiper('.hero__slider', {
+  const mySwiper = new Swiper('[data-hero-slider]', {
     loop: true,
+    allowTouchMove: isMobileDevice(),
     slidesPerView: 1,
     spaceBetween: 0,
     speed: 1000,
 
     pagination: {
-      el: '.swiper-pagination',
+      el: '[data-hero-pagination]',
       clickable: false,
 
     },
@@ -28,7 +31,7 @@ const initSliderHero = () => {
         slidesPerView: 1,
         allowTouchMove: false,
         pagination: {
-          el: '.swiper-pagination',
+          el: '[data-hero-pagination]',
           clickable: true,
         },
       },

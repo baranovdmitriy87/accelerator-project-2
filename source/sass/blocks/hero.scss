@@ -38,7 +38,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // overflow: hidden;
+  margin: 0 auto;
 
   @include vp-768 {
     width: $vp-768;
@@ -186,7 +186,7 @@
   text-align: center;
   margin: 0;
 
- @include vp-768 {
+  @include vp-768 {
     width: 474px;
     font-size: 17px;
     line-height: 24px;

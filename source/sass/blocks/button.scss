@@ -16,6 +16,8 @@
 
   background-color: $base-additional;
   color: $base-white;
+  transition: background-color 0.2s ease-in-out;
+
 
   &:hover {
     color: $btn-links-conditions;
