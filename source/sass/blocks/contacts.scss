@@ -37,30 +37,22 @@
     content: attr(data-shadow);
     position: absolute;
     display: block;
-    bottom: 10px;
+    bottom: 12px;
     left: 0;
     font-size: 26px;
-    font-weight: 800;
-    line-height: 26px;
     color: $color-whisper;
     opacity: 0.2;
     z-index: -1;
 
     @include vp-768 {
       top: -6px;
-      left: -3px;
-      font-size: 41px;
+      left: 0;
+      font-size: 40px;
     }
 
     @include vp-1440 {
+      top: -7px;
       font-size: 55px;
-    }
-
-    @include vp-768 {
-      font-size: 25px;
-      line-height: 25px;
-      margin: 0 0 21px;
-
     }
   }
 
