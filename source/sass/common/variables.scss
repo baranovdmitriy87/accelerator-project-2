@@ -9,6 +9,7 @@ $base-white: rgb(255, 255, 255);
 $base-black: rgb(0, 0, 0);
 
 // Other colors
+$color-disabled:#999999;
 $color-elephant: #657792;
 $color-resolution-blue: #1c3374;
 $color-resolution-blue-10: rgba(28, 51, 116, 0.1);
@@ -36,18 +37,11 @@ $color-overlay-slider-hero: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 13%, 
 $color-overlay-slider-card: linear-gradient(0.00deg, rgba(0, 0, 0, 0.6) 22%, rgba(0, 0, 0, 0) 60%);
 
 // Animation
-$tf-default: ease;
-$trans-default: 0.3s $tf-default;
+$tf-default: ease-in-out;
+$trans-default: 0.2s $tf-default;
 $border-width: 2px solid;
 
 // Width-Viewports
-
-// $mobile-width: 320px;
-// $mobile-width-only: 767px;
-// $tablet-width-only: 1439px;
-// $tablet-width: 768px;
-// $desktop-width: 1440px;
-
 $vp-320: 320px;
 $vp-767: 767px;
 $vp-768: 768px;

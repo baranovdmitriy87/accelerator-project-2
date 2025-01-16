@@ -12,7 +12,7 @@ const initSliderHero = () => {
     allowTouchMove: isMobileDevice(),
     slidesPerView: 1,
     spaceBetween: 0,
-    speed: 1000,
+    speed: 500,
 
     pagination: {
       el: '[data-hero-pagination]',

@@ -1,7 +1,7 @@
 .header {
   position: relative;
   background-color: $base-additional;
-  z-index: 3;
+  z-index: 10;
 }
 
 
@@ -60,7 +60,7 @@
   height: 26px;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 10;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -92,6 +92,7 @@
 
 .header__burger-contents {
   display: block;
+  margin-right: 7px;
   width: 17px;
   height: 2px;
   background-color: $base-white;
@@ -142,6 +143,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  color: $base-white;
 
   @include vp-768 {
     flex-wrap: wrap;
@@ -150,12 +152,12 @@
 
 .header__phone-link {
   @include transition;
+  @include disabled;
   font-family: $montserrat;
   font-size: 14px;
   font-weight: 600;
   line-height: 14px;
   margin-top: 12px;
-  color: $base-white;
 
   @include vp-768 {
     display: block;

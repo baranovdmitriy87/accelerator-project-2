@@ -50,7 +50,7 @@
 
 .site-list__link:active::after {
   width: 0%;
-  transition: width 0s ease-in-out;
+  transition: width $trans-default;
 }
 
 .site-list__link--bg-index {

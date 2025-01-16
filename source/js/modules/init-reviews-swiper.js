@@ -1,23 +1,29 @@
 import Swiper from 'swiper';
 import { Navigation } from "swiper/modules";
-import {isMobileDevice} from '../utils/is-mobile-device';
+import { isMobileDevice } from '../utils/is-mobile-device';
 
 Swiper.use([Navigation]);
 
 
 const initReviewsSlider = () => {
-    const mySwyper = new Swiper('[data-reviews-slider]', {
-      direction: 'horizontal',
-      allowTouchMove: isMobileDevice(),
-      slidesPerView: 'auto',
-      spaceBetween: 30,
-      speed: 1000,
+  const mySwyper = new Swiper('[data-reviews-slider]', {
+    direction: 'horizontal',
+    allowTouchMove: isMobileDevice(),
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    speed: 300,
 
-      navigation: {
-        nextEl: '[data-reviews-next]',
-        prevEl: '[data-reviews-prev]',
+    breakpoints: {
+      1440: {
+        spaceBetween: 120,
       },
-    });
-  }
+    },
 
-export {initReviewsSlider};
+    navigation: {
+      nextEl: '[data-reviews-next]',
+      prevEl: '[data-reviews-prev]',
+    },
+  });
+}
+
+export { initReviewsSlider };

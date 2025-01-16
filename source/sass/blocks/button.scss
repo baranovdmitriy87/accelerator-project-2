@@ -1,5 +1,6 @@
 // default
 .button {
+  @include disabled;
   padding: 10px;
 
   font-family: $montserrat;
@@ -16,7 +17,7 @@
 
   background-color: $base-additional;
   color: $base-white;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color $trans-default;
 
 
   &:hover {
@@ -36,5 +37,11 @@
     background-color: $btn-links-conditions;
     color: $base-white;
     border: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: $color-disabled;
   }
 }
