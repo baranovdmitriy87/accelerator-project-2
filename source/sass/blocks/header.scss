@@ -4,7 +4,6 @@
   z-index: 10;
 }
 
-
 .header__wrapper {
   @include vp-767 {
     position: relative;
@@ -186,12 +185,47 @@
   }
 }
 
+
+// @media (max-width: 587px) {
+//   .navbar__block>a {
+//     display: none;
+//   }
+
+//   .burger {
+//     display: block;
+//     animation-name: showBurger; // навешиваем анимацию
+//     animation-duration: 0.2s; // определяем её длительность
+//     animation-fill-mode: forwards; // и говорим что в конце анимации элемент должен остаться в конечном состоянии анимации
+//   }
+
+//   .burger__ul li {
+//     font-size: 1.5em;
+//     list-style: none;
+//     background: rgb(179, 179, 179);
+//     padding: 5px;
+//     margin: 5px 0;
+//     width: 90%;
+//     text-align: center;
+//   }
+// }
+
+// // Сама анимация.
+// @keyframes showBurger {
+
+//   // Сразу описываем конечное состояние, так как начальное мы уже определили выше.
+//   100% {
+//     opacity: 1; // Делаем снова непрозрачным.
+//     transform: translateY(0) // И возвращаем на место
+//   }
+// }
+
+
 @include vp-1439 {
-  .header--closed .header-nav__wrapper {
+  .header--closed .header__nav-wrapper {
     display: none;
   }
 
-  .header-nav__wrapper {
+  .header__nav-wrapper {
     width: 100%;
     position: absolute;
     top: 101px;
@@ -199,21 +233,35 @@
     z-index: 10;
     text-align: center;
 
+    transform: translateY(-150%);
+
+    animation-name: showBurger; // навешиваем анимацию
+    animation-duration: 0.8s; // определяем её длительность
+    animation-fill-mode: forwards;
+
     @include vp-768 {
       top: 85px;
+    }
+  }
+
+  @keyframes showBurger {
+    // Сразу описываем конечное состояние, так как начальное мы уже определили выше.
+    100% {
+      opacity: 1; // Делаем снова непрозрачным.
+      transform: translateY(0) // И возвращаем на место
     }
   }
 }
 
 @include vp-1440 {
-  .header-nav__wrapper {
+  .header__nav-wrapper {
     display: flex;
     flex-direction: column;
     row-gap: 15px;
   }
 }
 
-.header-nav__list {
+.header__nav-list {
   color: white;
   position: relative;
   display: flex;

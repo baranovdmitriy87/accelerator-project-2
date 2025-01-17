@@ -1,6 +1,7 @@
 .reviews {
   overflow: hidden;
   position: relative;
+  padding-bottom: 40px;
 
   >picture {
     display: none;
@@ -124,17 +125,7 @@
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   background-color: $base-white;
   gap: 0 30px;
-  // height: auto;
 
-  // picture {
-  //   flex-shrink: 0;
-  // }
-
-  // img {
-  //   width: 258px;
-  //   height: 253px;
-  //   object-fit: cover;
-  // }
   @include vp-768 {
     flex-direction: row;
     max-width: 565px;
@@ -150,11 +141,8 @@
   @include vp-1440 {
     max-width: 700px;
     padding-right: 30px;
-    // gap: 0 120px;
-
 
     img {
-      // width: 186px;
       height: 253px;
     }
   }
@@ -176,17 +164,17 @@
   }
 }
 
-.reviews__body-text {
-  margin: 0 0 14px;
+// .reviews__body-text {
+//   margin: 0 0 14px;
 
-  @include vp-768 {
-    margin: 0 0 16px;
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
+//   @include vp-768 {
+//     margin: 0 0 16px;
+//     font-size: 12px;
+//     line-height: 18px;
+//   }
+// }
 
-.reviews__text-message {
+.reviews__text p {
   margin: 0 0 10px;
   font-size: 12px;
   line-height: 18px;
@@ -201,11 +189,9 @@
     line-height: 22px;
 
   }
-
-
 }
 
-.reviews__info {
+.reviews__content > p {
   margin: 6px 0 0;
   font-weight: 300;
   font-size: 12px;
@@ -217,11 +203,10 @@
 
   @include vp-1440 {
     margin: -10px 0 0;
-
   }
 }
 
-.reviews__name {
+.reviews__content  span {
   display: block;
   margin: 0 0 8px;
   font-weight: 700;

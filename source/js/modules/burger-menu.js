@@ -14,12 +14,6 @@ const initBurgerMenu = () => {
     document.body.style.overflow = isClosed ? 'auto' : 'hidden';
   };
 
-  const closeburgerToggle = () => {
-    header.classList.remove('header--opened');
-    header.classList.add('header--closed');
-    overlay.classList.remove('is-active');
-  };
-
   menuLinks.forEach((link) => {
     link.addEventListener('click', event => {
       event.preventDefault();
