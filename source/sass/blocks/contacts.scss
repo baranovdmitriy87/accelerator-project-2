@@ -31,7 +31,6 @@
   font-weight: 800;
   line-height: 22px;
   text-align: left;
-  text-align: left;
 
   &::before {
     content: attr(data-shadow);
@@ -104,9 +103,11 @@
   }
 }
 
-.contacts__text-message {
+.contacts__body-text p {
   width: 270px;
   margin: 0 0 30px;
+  font-size: 14px;
+  line-height: 20px;
   letter-spacing: -0.05px;
 
   @include vp-768 {
@@ -114,7 +115,6 @@
     font-size: 16px;
     line-height: 24px;
     margin: 0 0 40px;
-
   }
 }
 
@@ -135,7 +135,6 @@
     font-size: 18px;
     line-height: 18px;
     margin: 0 0 10px;
-
   }
 }
 
@@ -150,6 +149,7 @@
 
 .contacts__list {
   @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 30px;

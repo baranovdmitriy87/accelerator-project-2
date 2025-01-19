@@ -1,6 +1,7 @@
 // default
 .button {
   @include disabled;
+
   padding: 10px;
 
   font-family: $montserrat;
@@ -21,9 +22,9 @@
 
 
   &:hover {
-    color: $btn-links-conditions;
-    border: 1px solid $link-active-blue;
-    background: transparent;
+    color: $base-additional;
+    border: 1px solid $color-resolution-blue;
+    background: $base-white;
   }
 
   &:focus-visible {

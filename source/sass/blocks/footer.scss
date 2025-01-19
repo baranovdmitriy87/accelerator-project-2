@@ -5,10 +5,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   // gap: 16px;
 
   @include vp-768 {
-    padding: 34px 0 0 0;
+    padding: 34px 0 0;
   }
 }
 
@@ -22,7 +23,7 @@
   }
 }
 
-.footer__logo-link   {
+.footer__logo-link {
   cursor: pointer;
   transition: all $trans-default;
 
@@ -59,10 +60,10 @@
 }
 
 
-
 .footer__phone-link {
   @include vp-1440 {
     @include transition;
+
     font-size: 18px;
     font-weight: 600;
     line-height: 18px;
@@ -95,7 +96,8 @@
   @include vp-768 {
     width: auto;
     flex-direction: row;
-    margin: 0 0 3px 0;
+    margin: 0 0 3px;
+
     // gap: 13px;
   }
 
@@ -123,7 +125,7 @@
 
   @include vp-1440 {
     width: 1200px;
-    margin: 6px 0 27px 0;
+    margin: 6px 0 27px;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0;
@@ -167,6 +169,7 @@
 
 .footer__link {
   @include transition;
+
   position: relative;
   display: inline-block;
   font-size: 14px;
@@ -186,6 +189,7 @@
 
   &::after {
     @include hover-link;
+
     background-color: $base-primery;
   }
 
@@ -215,7 +219,6 @@
 
 .footer__social-list {
   width: 100%;
-  margin: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -239,6 +242,7 @@
 
 .footer__social-link {
   @include transition;
+
   width: 100%;
   height: 100%;
 
@@ -262,14 +266,12 @@
 }
 
 .footer__social-link {
-
   &--vk:active {
     background: $base-additional;
   }
 
   &--ok:active {
     background: $color-bg-ok;
-
   }
 
   &--reddit:active {
@@ -279,6 +281,7 @@
 
 .footer__politics {
   @include transition;
+
   font-size: 12px;
   font-weight: 300;
   line-height: 12px;

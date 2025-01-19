@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="preload" href="css/style.min.css" as="style">
-  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/Montserrat-Light.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon.png">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="images/favicons/icon.svg">
@@ -22,12 +22,12 @@
 
 <body class="page-body">
 
-  <!--header-->
+  <!-- header -->
   <header class="header header--closed" data-test="header">
     <h1 class="visually-hidden">Lifetour. Увлекательные походы в горы</h1>
     <div class="header__wrapper container">
       <div class="header__burger-menu">
-        <button class="header__burger-button button" type="button">
+        <button class="header__burger-button button" type="button" aria-label="Открыть меню.">
           <span class="header__burger-contents"></span>
         </button>
       </div>
@@ -68,13 +68,13 @@
     <div class="overlay"></div>
 
     <!-- hero -->
-    <section class="hero hero-bg-color" data-test="hero">
-      <div class="hero__slider swiper-container" data-hero-slider>
+    <section class="hero" data-test="hero">
+      <div class="hero__slider swiper-container">
         <ul class="hero__list hero__slider-wrapper swiper-wrapper">
           <li class="hero__item hero__slide swiper-slide">
             <div class="hero__content">
               <h2>Захватывающие<br>вершины Кавказа</h2>
-              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
+              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите <br>восход
                 на&nbsp;вершину горы Чегет.</p>
               <a class="hero__button button" href="#">Смотреть тур</a>
               <div class="hero__details">
@@ -109,7 +109,7 @@
             <div class="hero__content hero__content--kam">
               <h2>Невероятная<br>природа Камчатки</h2>
               <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых
-                уголков дикой<br> природы в мире.</p>
+                уголков дикой<br>природы в мире.</p>
               <a class="hero__button button" href="#">Смотреть тур</a>
               <div class="hero__details">
                 <span class="hero__details-data">
@@ -204,7 +204,7 @@
             </div>
           </li>
         </ul>
-        <div class="hero__swiper-pagination swiper-pagination" data-hero-pagination>
+        <div class="hero__swiper-pagination swiper-pagination">
         </div>
       </div>
     </section>
@@ -245,13 +245,13 @@
         <div class="reviews__top">
           <h2 class="reviews__header" data-shadow="Отзывы">Отзывы</h2>
           <div class="reviews__arrows">
-            <button class="reviews__prev arrow button" type="button" aria-label="Предыдущий слайд." data-reviews-prev>
+            <button class="reviews__prev arrow button" type="button" aria-label="Предыдущий слайд.">
               <svg class="arrow__icon" width="14" height="9" viewBox="0 0 14 9" role="img" focusable="false"
                 aria-hidden="true">
                 <use href="/__spritemap#sprite-arrow-prev"></use>
               </svg>
             </button>
-            <button class="reviews__next arrow button" type="button" aria-label="Следующий слайд." data-reviews-next>
+            <button class="reviews__next arrow button" type="button" aria-label="Следующий слайд.">
               <svg class="arrow__icon" width="14" height="9" viewBox="0 0 14 9" role="img" focusable="false"
                 aria-hidden="true">
                 <use href="/__spritemap#sprite-arrow-next"></use>
@@ -259,7 +259,7 @@
             </button>
           </div>
         </div>
-        <div class="reviews__slider swiper-container" data-reviews-slider>
+        <div class="reviews__slider swiper-container">
           <ul class="reviews__list swiper-wrapper">
             <li class="reviews__item swiper-slide">
 
@@ -276,7 +276,7 @@
 
               <div class="reviews__content">
                 <div class="reviews__text">
-                  <p> Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие!
+                  <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие!
                     Инструкторы, настоящие эксперты,
                     всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
                   <p>С уверенностью могу сказать, что жизнь разделилась на до этого
@@ -387,21 +387,63 @@
         <h2>Остались вопросы?</h2>
         <p>Заполните форму и наш оператор <br> свяжется <br> с вами для консультации.</p>
         <div class="feedback__form-container" data-form-validate="data-form-validate" data-callback="base">
-          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post"
-            data-form-feedback="data-form-feedback">
+
+          <form class="feedback__form" id="feedback-form" action="https://echo.htmlacademy.ru" method="post"
+            data-form-feedback="data-form-feedback" novalidate>
+
+            <!-- ОБРАЗЕЦ -->
+            <!-- <form class="form" name="form" method="POST" novalidate>
+              <div class="form__field-container">
+                <label class="form__field">
+                  <span class="form__label">Имя:</span>
+                  <input class="form__type-input" type="text" id="input__name" placeholder="Иван"
+                    pattern="^[a-zA-Zа-яА-ЯЁё \-]+$" data-error-message="Разрешены символы латиницы,
+                      кириллицы, знаки дефиса и пробелы." aria-describedby="name-error" required>
+                </label>
+                <span class="form__error
+                  input__name-error" id="name-error" aria-live="polite">
+                </span>
+              </div>
+              <div class="form__field-container">
+                <label class="form__field">
+                  <span class="form__label">Фамилия:</span>
+                  <input class="form__type-input" type="text" id="input__surname" placeholder="Васильевич"
+                    pattern="^[a-zA-Zа-яА-ЯЁё\s\-]+$" data-error-message="Разрешены символы латиницы,
+                    кириллицы, знаки дефиса и пробелы." aria-describedby="surname-error" required>
+                </label>
+                <span class="form__error
+                  input__surname-error" id="surname-error" aria-live="polite">
+                </span>
+              </div>
+              <div class="form__field-container">
+                <label class="form__field">
+                  <span class="form__label">Почта:</span>
+                  <input type="email" id="input__e-mail" class="form__type-input"
+                    placeholder="menyaet.professiyu@ivan.com" aria-describedby="email-error" required>
+                </label>
+                <span class="form__error input__e-mail-error" id="email-error" aria-live="polite">
+                </span>
+              </div> -->
+
+            <!-- МОЕ -->
             <div class="feedback__form-input feedback__form-input--phone" data-validate-type="phone"
               data-required="data-required">
               <label aria-label="Введите ваш номер телефона.">
-                <input type="tel" name="phone" placeholder="Телефон" autocomplete="off" required>
+                <input class="feedback__form-input" type="tel" name="phone" placeholder="Телефон" autocomplete="off"
+                  pattern="^\+7[1-9]{10}$" required>
               </label>
             </div>
+
             <div class="feedback__form-input feedback__form-input--email" data-validate-type="email"
               data-required="data-required">
               <label aria-label="Введите вашу электронную почту.">
-                <input type="email" name="email" placeholder="Email" autocomplete="off" required>
+                <input class="feedback__form-input" type="email" name="email" placeholder="Email" minlength="2"
+                  maxlength="32" autocomplete="off" pattern="^[a-zA-Zа-яА-Я]+$" required>
               </label>
+
             </div>
-            <button class="feedback__form-button button" type="submit">Отправить</button>
+            <button class="feedback__form-button button feedback__form-button--inactive"
+              type="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -428,7 +470,7 @@
         <div class="contacts__content">
           <h2 class="contacts__title" data-shadow="Контакты">Контакты</h2>
           <div class="contacts__body-text">
-            <p class="contacts__text contacts__text-message">Свяжитесь с&nbsp;нами любым удобным для вас способом или
+            <p>Свяжитесь с&nbsp;нами любым удобным для вас способом или
               приходите
               к&nbsp;нам в гости. Мы&nbsp;будем рады поделиться увлекательными историями и&nbsp;подобрать для вас
               тур.</p>
@@ -540,11 +582,6 @@
       </section>
     </div>
   </footer>
-  <!-- <div id="tours" data-test="tours" style="height: 100vh;">tours</div>
-  <div id="training" data-test="training" style="height: 100vh;">training</div>
-  <div id="adv" data-test="adv">adv</div>
-  <div id="gallery" data-test="gallery">gallery</div>-->
-
 
   <script type="module" src="js/main.js"></script>
 </body>

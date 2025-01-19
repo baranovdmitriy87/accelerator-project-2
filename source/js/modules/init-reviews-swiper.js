@@ -1,12 +1,12 @@
 import Swiper from 'swiper';
-import { Navigation } from "swiper/modules";
+import { Navigation } from 'swiper/modules';
 import { isMobileDevice } from '../utils/is-mobile-device';
 
 Swiper.use([Navigation]);
 
 
 const initReviewsSlider = () => {
-  const mySwyper = new Swiper('[data-reviews-slider]', {
+  const setSwyperReview = new Swiper('.reviews__slider', {
     direction: 'horizontal',
     allowTouchMove: isMobileDevice(),
     slidesPerView: 'auto',
@@ -20,10 +20,11 @@ const initReviewsSlider = () => {
     },
 
     navigation: {
-      nextEl: '[data-reviews-next]',
-      prevEl: '[data-reviews-prev]',
+      nextEl: '.reviews__next',
+      prevEl: '.reviews__prev',
     },
   });
-}
+  return setSwyperReview;
+};
 
 export { initReviewsSlider };

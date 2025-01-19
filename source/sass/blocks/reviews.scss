@@ -28,6 +28,7 @@
 
   @include vp-1440 {
     padding: 145px 0 42px 130px;
+
     // padding-top: 155px;
     // padding-bottom: 42px;
   }
@@ -52,6 +53,7 @@
   font-size: 22px;
   font-weight: 800;
   line-height: 22px;
+
   // margin: 0 0 59px;
 
   &::before {
@@ -67,6 +69,7 @@
 
     @include vp-768 {
       top: -4px;
+
       // bottom: auto;
       font-size: 26px;
       line-height: 26px;
@@ -75,6 +78,7 @@
     @include vp-1440 {
       top: -25px;
       font-size: 55px;
+
       // line-height: 40px;
     }
   }
@@ -187,7 +191,6 @@
   @include vp-1440 {
     font-size: 14px;
     line-height: 22px;
-
   }
 }
 
@@ -206,7 +209,7 @@
   }
 }
 
-.reviews__content  span {
+.reviews__content span {
   display: block;
   margin: 0 0 8px;
   font-weight: 700;
